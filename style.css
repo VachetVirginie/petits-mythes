@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Young+Serif&display=swap');
+
+:root {
+  color-scheme: light;
+  --paper: #fff9ef;
+  --ink: #25261e;
+  --green: #294333;
+  --rust: #873b25;
+  --gold: #f5d693;
+  --serif: 'Young Serif', Georgia, serif;
+  font: 100%/1.55 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, p { margin: 0; }
+h1, h2 { font: 400 clamp(2.3rem, 6.4vw, 4.2rem)/1.09 var(--serif); overflow-wrap: anywhere; }
+a { color: var(--rust); text-underline-offset: .22em; }
+a:focus-visible, summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.skip { position: absolute; top: .7rem; left: .7rem; padding: .65rem; background: var(--paper); transform: translateY(-180%); }
+.skip:focus { transform: none; }
+.top, .home, .reading { width: min(100% - 2rem, 53rem); margin-inline: auto; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 1rem; border-bottom: 1px solid #d4c7ae; padding-block: .45rem; }
+.top a, .return { display: inline-flex; align-items: center; min-height: 2.75rem; font-weight: 700; }
+.top .brand { color: var(--green); font-family: var(--serif); font-weight: 400; }
+.home, .reading { padding-block: clamp(2rem, 7vw, 4rem) 3rem; }
+.home h1, .reading h1 { color: var(--green); letter-spacing: -.035em; }
+.intro { color: #554f37; margin-block: .7rem 1.7rem; font-size: clamp(1.1rem, 3vw, 1.4rem); }
+.featured { padding: clamp(1.15rem, 5vw, 2.6rem); border-radius: 1rem; background: var(--green); color: #fff7dc; }
+.meta { color: var(--rust); font-size: .9rem; font-weight: 700; }
+.featured .meta { color: var(--gold); }
+.featured h2 { margin-block: .5rem .8rem; font-size: clamp(1.9rem, 5vw, 3.2rem); }
+.featured p:not(.meta) { max-width: 59ch; font-size: 1.15rem; }
+.read { display: inline-flex; align-items: center; gap: .6rem; margin-top: 1rem; min-height: 2.75rem; padding: .4rem 1rem; border-radius: 2rem; color: #432b16; background: var(--gold); font-weight: 700; }
+.featured .read:focus-visible { outline-color: var(--gold); }
+.library { margin-top: 2.3rem; }
+.library h2 { color: var(--green); margin-bottom: .6rem; font-size: clamp(1.6rem, 4vw, 2.35rem); }
+.library ul { padding-left: 1.25rem; }
+.library li + li { margin-top: .55rem; }
+.reading { max-width: 41rem; }
+.reading h1 { margin-block: .6rem 1.35rem; }
+.story-text { font-size: clamp(1.25rem, 3vw, 1.47rem); line-height: 1.6; }
+.story-text p + p { margin-top: .85em; }
+details { margin-top: 1.8rem; border-top: 1px solid #d4c7ae; padding-top: .6rem; }
+summary { padding-block: .6rem; width: fit-content; cursor: pointer; }
