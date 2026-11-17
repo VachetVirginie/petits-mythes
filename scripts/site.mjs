@@ -15,7 +15,7 @@ if (!stories.length || byId.size !== stories.length) throw new Error('Catalogue 
 for (const story of stories) {
   const count = [...words.segment(story.paragraphs.join(' '))].filter(word => word.isWordLike).length
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(story.id) || !story.title || !story.tradition || !story.source.label
-    || URL.parse(story.source.url)?.protocol !== 'https:' || story.paragraphs.length < 3 || count < 80 || count > 230) {
+    || URL.parse(story.source.url)?.protocol !== 'https:' || story.paragraphs.length < 3 || count < 230 || count > 330) {
     throw new Error(`Histoire invalide : ${story.id} (${count} mots).`)
   }
 }
@@ -82,7 +82,7 @@ function home() {
   const archive = [...first.keys()].reverse().filter(id => id !== latest?.id)
   return layout('Les Petits Mythes', `<main class="home" id="contenu" tabindex="-1">
   <h1>Les Petits Mythes</h1>
-  <p class="intro">Une courte histoire du monde à lire ensemble, dès 4 ans.</p>
+  <p class="intro">Une histoire du monde à lire ensemble, dès 4 ans.</p>
   ${story ? `<section class="featured" aria-labelledby="aujourdhui">
     <p class="meta">${first.get(story.id) === latest.date ? 'Histoire du jour' : 'À relire aujourd’hui'} · <time datetime="${latest.date}">${dateLabel(latest.date)}</time></p>
     <h2 id="aujourdhui">${escape(story.title)}</h2>
