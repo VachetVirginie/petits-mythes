@@ -2,7 +2,7 @@
 
 [Lire l’histoire du jour](https://vachetvirginie.github.io/petits-mythes/)
 
-Un mythe du monde raconté en français, à lire à voix haute dès 4 ans. Chaque récit est une adaptation libre sourcée de 230 à 330 mots, conçue pour environ trois minutes de lecture à voix haute.
+Un mythe du monde raconté en français, à lire à voix haute dès 4 ans. Chaque récit est une adaptation libre sourcée de 230 à 330 mots, conçue pour environ trois minutes de lecture à voix haute. À sa première apparition, chaque divinité ou personnage central est présenté dans le récit avec son rôle, son pouvoir ou son lien avec les autres personnages.
 
 GitHub Actions lance la publication tous les jours à **8 h, heure de Paris**. Le workflow enregistre une histoire en Markdown dans `publications/` et déploie le site. Un second lancement le même jour conserve la publication déjà enregistrée.
 
