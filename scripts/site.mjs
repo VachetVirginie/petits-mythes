@@ -15,7 +15,7 @@ if (!stories.length || byId.size !== stories.length) throw new Error('Catalogue 
 for (const story of stories) {
   const count = [...words.segment(story.paragraphs.join(' '))].filter(word => word.isWordLike).length
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(story.id) || !story.title || !story.tradition || !story.source.label
-    || URL.parse(story.source.url)?.protocol !== 'https:' || story.paragraphs.length < 3 || count < 230 || count > 330) {
+    || URL.parse(story.source.url)?.protocol !== 'https:' || story.paragraphs.length < 3 || count < 350 || count > 550) {
     throw new Error(`Histoire invalide : ${story.id} (${count} mots).`)
   }
 }
