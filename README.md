@@ -9,3 +9,5 @@ GitHub Actions lance la publication tous les jours à **8 h, heure de Paris**. L
 Le premier passage publie les seize récits préparés. Ensuite, la moins récemment publiée revient comme relecture. Tout nouveau récit ajouté à `histoires.json` passe avant les relectures.
 
 Avec Node.js 24, construire le site avec `node scripts/site.mjs`. Pour enregistrer le récit du jour, utiliser `node scripts/site.mjs --publish`. Servir le dossier `dist` pour consulter le résultat.
+
+Les lancements de secours de 8 h 15 et 8 h 45, heure de Paris, reprennent la publication si le premier lancement est retardé. La vérification de la date du jour empêche de créer un deuxième contenu. Le délai du planificateur GitHub peut varier.
